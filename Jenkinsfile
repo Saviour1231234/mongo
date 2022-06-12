@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh 'gradlew clean build -x test'
+				sh './gradlew clean build -x test'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-				sh 'gradlew test'
+				sh './gradlew test'
 				junit 'build/test-results/test/*.xml'
             }
         }
