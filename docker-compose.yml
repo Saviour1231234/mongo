@@ -34,11 +34,12 @@ slave:
     - MESOS_CONTAINERIZERS=docker,mesos
     - MESOS_ISOLATOR=cgroups/cpu,cgroups/mem
     - MESOS_LOG_DIR=/var/log
+    - MESOS_WORK_DIR=/var/lib/mesos
   volumes:
     - /var/run/docker.sock:/run/docker.sock
     - /usr/bin/docker:/usr/bin/docker
     - /sys:/sys:ro
-    - mesosslace-stuff:/var/log
+    - mesosslave-stuff:/var/log
   expose:
     - "5051"
 jenkins:
