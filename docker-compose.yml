@@ -43,9 +43,6 @@ slave:
     - "5051"
 jenkins:
   image: myjenkins-blueocean:2.332.3-1
-  environment:
-    - JENKINS_USERNAME=isbobrenok
-    - JENKINS_PASSWORD=5601ce7106c045ebb822ddf19fc2dabc
   links:
     - marathon:marathon
   volumes:
