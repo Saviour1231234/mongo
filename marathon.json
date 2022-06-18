@@ -1,0 +1,17 @@
+{
+  "id": "mongo-demo",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "",
+      "network": "BRIDGE",
+      "portMappings": [
+        {"containerPort": 8082, "hostPort": 0}
+      ]
+    }
+  },
+  "volumes": [],
+  "cpus": 0.2,
+  "mem": 512.0,
+  "instances": 1
+}
