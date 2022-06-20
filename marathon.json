@@ -3,7 +3,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "localhost:5000/isbobrenok/marathon-demo:latest",
+      "image": "",
       "network": "BRIDGE",
       "portMappings": [
         {"containerPort": 8000, "servicePort": 8000}
