@@ -35,6 +35,7 @@ slave:
     - MESOS_ISOLATOR=cgroups/cpu,cgroups/mem
     - MESOS_LOG_DIR=/var/log
     - MESOS_WORK_DIR=/var/lib/mesos
+    - MESOS_SYSTEMD_ENABLE_SUPPORT=false
   volumes:
     - /var/run/docker.sock:/run/docker.sock
     - /usr/bin/docker:/usr/bin/docker
@@ -51,6 +52,7 @@ jenkins:
     - .:/var/jenkins_data
     - /var/run/docker.sock:/var/run/docker.sock
     - /usr/bin/docker:/usr/bin/docker
+  user: root
   ports:
     - "8081:8080"
 registry:
